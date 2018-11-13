@@ -1,14 +1,107 @@
-body {
-    margin: 0;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-}
-header {
-    height: 20vh;
-    background-color: #ff4500;
+html, body {
+    margin: 0;  
 }
 
-#left {
+body {
+    font-size: 25px;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    text-transform: uppercase;
+    overflow-x: hidden;
+}
+
+
+.box {
+    text-align: center;
+    color: #fff;  
+}
+
+.head {
+    background-color: #ff4500;
+    height: 40px;
+    line-height: 40px;
+}
+
+.content {
+    display: flex;
+}
+
+.text-cont {
+    background-color: #00bfff;   
+}
+
+.left { 
+    background-color: #228b22;
+}
+
+.right {  
+    background-color: #ffb6c1;
+}
+
+.foot {
+    background-color: #9370db;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+@media screen and (min-width: 992px) {
+    .content {
+        height: 300px;
+    }
+    .text-cont {
+        flex-basis: 56%;
+    }
     
+    .left {
+        flex-basis: 22%;
+        
+    }
+    .right {
+        flex-basis: 22%;
+    }
+}
+    
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 600px;
+        
+    }
+    
+    .text-cont {
+        flex-basis: 700px;
+    }
+    
+    .left {
+        width: 1000px;
+        order: 2;
+        
+    }
+    .right {
+        order: 1;
+        flex-basis: 300px;
+    } 
+}
+
+
+@media screen and (max-width: 768px) { 
+    .content {
+        flex-direction: column;
+    }
+     .text-cont {
+        flex-basis: 350px;
+    }
+    .left {
+        order: 1;
+        flex-basis: 350px;
+    }
+    .right {
+        order: 1;
+        flex-basis: 350px;
+    }
 }
